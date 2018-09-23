@@ -7,9 +7,12 @@
 <nav class="menu">
   Menu
     <ul>
-      <li><a href="/">Dashboard</a></li>
-      <li><a href="/users">Users</a></li>
-      <li><a href="/posts">Posts</a></li>
+      <li><a [routerLink]="['/']">Dashboard</a></li>
+      <li><a [routerLink]="['/users']">Users</a></li>
+      <li><a [routerLink]="['/posts']">Posts</a></li>
+      <li><a [routerLink]="['/comments']">Comments</a></li>
+      <li><a [routerLink]="['/badges']">Badges</a></li>
+      <li><a [routerLink]="['/reports']">Reports</a></li>
     </ul>
   </nav>
 <router-outlet></router-outlet>

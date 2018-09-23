@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-user-detail',
-  templateUrl: './user-detail.component.html',
-  styleUrls: ['./user-detail.component.css']
+  selector: 'app-comment-detail',
+  templateUrl: './comment-detail.component.html',
+  styleUrls: ['./comment-detail.component.css']
 })
-export class UserDetailComponent implements OnInit {
+export class CommentDetailComponent implements OnInit {
 
-  userId: String;
+  commentId: String;
 
   constructor(
     private route: ActivatedRoute,
@@ -17,7 +17,6 @@ export class UserDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.userId = this.route.snapshot.paramMap.get('id');
+    this.commentId = this.route.snapshot.paramMap.get('id');
   }
-
 }

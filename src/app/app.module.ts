@@ -6,11 +6,27 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersListComponent } from './userslist/userslist.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { CommentsListComponent } from './comments-list/comments-list.component';
+import { CommentDetailComponent } from './comment-detail/comment-detail.component';
+import { BadgesListComponent } from './badges-list/badges-list.component';
+import { BadgeDetailComponent } from './badge-detail/badge-detail.component';
+import { ReportDetailComponent } from './report-detail/report-detail.component';
+import { ReportsListComponent } from './reports-list/reports-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'users', component: UsersListComponent },
   { path: 'user/:id', component: UserDetailComponent },
+  { path: 'posts', component: PostsListComponent },
+  { path: 'post/:id', component: PostDetailComponent },
+  { path: 'comments', component: CommentsListComponent },
+  { path: 'comment/:id', component: CommentDetailComponent },
+  { path: 'badges', component: BadgesListComponent },
+  { path: 'badge/:id', component: BadgeDetailComponent },
+  { path: 'reports', component: ReportsListComponent },
+  { path: 'report/:id', component: ReportDetailComponent },
   { path: '**', redirectTo: '/' }
 ];
 
@@ -20,7 +36,15 @@ const appRoutes: Routes = [
     AppComponent,
     DashboardComponent,
     UsersListComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    PostsListComponent,
+    PostDetailComponent,
+    CommentsListComponent,
+    CommentDetailComponent,
+    BadgesListComponent,
+    BadgeDetailComponent,
+    ReportDetailComponent,
+    ReportsListComponent
   ],
   imports: [
     BrowserModule,
