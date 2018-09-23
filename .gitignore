@@ -5,6 +5,10 @@
 /tmp
 /out-tsc
 
+src/assets/bower_components
+src/assets/dist
+src/assets/plugins
+
 # dependencies
 /node_modules
 
