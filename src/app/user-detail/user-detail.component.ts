@@ -13,7 +13,7 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    //private service: HeroService
+    // private service: HeroService
   ) { }
 
   ngOnInit() {
