@@ -7,6 +7,7 @@ import { LayoutsComponent } from './layouts/layouts.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { SideBarComponent } from './layouts/side-bar/side-bar.component';
 import { LoginComponent } from './modules/login/login.component';
+import { ApiService } from './commons/api.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { LoginComponent } from './modules/login/login.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,37 @@
+{
+    "users": [
+      { "id": 1, "name": "some user"},
+      { "id": 2, "name": "some user"},
+      { "id": 3, "name": "some user"},
+      { "id": 4, "name": "some user"},
+      { "id": 5, "name": "some user"}
+    ],
+    "reports": [
+      { "id": 1, "message": "some report", "postId": 1 },
+      { "id": 2, "message": "some report", "postId": 2 },
+      { "id": 3, "message": "some report", "postId": 2 },
+      { "id": 4, "message": "some report", "postId": 3 },
+      { "id": 5, "message": "some report", "postId": 3 }
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 2 },
+        { "id": 2, "body": "some comment", "postId": 2 },
+        { "id": 3, "body": "some comment", "postId": 3 },
+        { "id": 4, "body": "some comment", "postId": 1 },
+        { "id": 5, "body": "some comment", "postId": 1 }
+    ],
+    "posts": [
+      { "id": 1, "body": "some post" },
+      { "id": 2, "body": "some post" },
+      { "id": 3, "body": "some post" },
+      { "id": 4, "body": "some post" },
+      { "id": 5, "body": "some post" }
+    ],
+    "badges": [
+        { "id": 1, "body": "some badge", "userId": 1 },
+        { "id": 2, "body": "some badge", "userId": 2 },
+        { "id": 3, "body": "some badge", "userId": 3 },
+        { "id": 4, "body": "some badge", "userId": 4 },
+        { "id": 5, "body": "some badge", "userId": 5 }
+    ]
+}
