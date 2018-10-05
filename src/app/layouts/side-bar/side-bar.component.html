@@ -1,7 +1,20 @@
-  <ul>
-    <li><a routerLinkActive="active" routerLink="/dashboard">Dashboard</a></li>
-    <li><a routerLinkActive="active" routerLink="/users">Users</a></li>
-    <li><a routerLinkActive="active" routerLink="/posts">Posts</a></li>
-    <li><a routerLinkActive="active" routerLink="/reports">Reports</a></li>
-    <li><a routerLinkActive="active" routerLink="/badges">Badges</a></li>  
-  </ul>
+<div class="logo">
+    <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+      <div class="logo-img">
+          <img src="./assets/img/angular2-logo-white.png"/>
+      </div>
+    </a>
+    <a class="simple-text logo-normal">
+        Admin LDW
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <ul class="nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a [routerLink]="[menuItem.path]">
+                <i class="now-ui-icons {{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

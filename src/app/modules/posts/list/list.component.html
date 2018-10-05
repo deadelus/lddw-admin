@@ -1,3 +1,7 @@
-<p>
-  posts list works!
-</p>
+<h1>Posts List</h1>
+<ul>
+  <li *ngFor="let post of posts">
+    {{ post.id }}  - {{ post.title }} - {{ post.body }}
+  </li>
+</ul>
+<a routerLinkActive="active" routerLink="/posts/new">New</a>

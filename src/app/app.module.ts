@@ -8,6 +8,7 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { SideBarComponent } from './layouts/side-bar/side-bar.component';
 import { LoginComponent } from './modules/login/login.component';
 import { ApiService } from './commons/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ApiService } from './commons/api.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

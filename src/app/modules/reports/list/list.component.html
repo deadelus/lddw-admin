@@ -1,3 +1,6 @@
-<p>
-  reports list works!
-</p>
+<h1>Reports List</h1>
+<ul>
+  <li *ngFor="let report of reports">
+    {{ report.id }} - {{ report.message }} for post {{ report.postId }}
+  </li>
+</ul>

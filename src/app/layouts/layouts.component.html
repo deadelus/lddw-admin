@@ -1,6 +1,12 @@
 <app-header></app-header>
-<app-side-bar></app-side-bar>
-<main id="main-body">
-  <!-- <app-alert-bar></app-alert-bar> -->
-  <router-outlet></router-outlet>
-</main>
+<div class="wrapper">
+    <div class="sidebar" data-color="red">
+      <app-side-bar></app-side-bar>
+    </div>
+    <div class="main-panel">
+      <main id="main-body">
+        <!-- <app-alert-bar></app-alert-bar> -->
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReportsService } from '../reports.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reportsService: ReportsService) { }
+
+  reports = [];
 
   ngOnInit() {
+    this.reportsService.getReportsList().subscribe(result => {
+      this.reports = result;
+    },
+    error => {
+      console.log("Error: ");
+      console.log(error);
+    });
   }
 
 }
