@@ -1,11 +1,11 @@
-<app-header></app-header>
 <div class="wrapper">
     <div class="sidebar" data-color="red">
       <app-side-bar></app-side-bar>
     </div>
     <div class="main-panel">
-      <main id="main-body">
-        <!-- <app-alert-bar></app-alert-bar> -->
+      <app-navbar></app-navbar>
+      <div class="panel-header panel-header-sm"></div>
+      <main class="main-content">
         <router-outlet></router-outlet>
       </main>
     </div>

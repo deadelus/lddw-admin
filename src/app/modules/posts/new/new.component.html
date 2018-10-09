@@ -1,32 +1,44 @@
-<h1>Add new post</h1>
-<form class="form-search clearfix" *ngIf="postForm" [formGroup]="postForm" (ngSubmit)="onSubmit(postForm.value)">
-    <div class="form-group" [class.error-style]="showError && postForm.controls['title'].errors">
-        <label>Title</label>
-        <input type="text" class="form-control" formControlName="title" >
-        <p *ngIf="showError && postForm.controls['title'].hasError('required')" class="error">
-            Title is required.
-        </p>
-    </div>
+    <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Add new post</h1>
+                </div>
+                <div class="card-body">
+    <form class="form-search clearfix" *ngIf="postForm" [formGroup]="postForm" (ngSubmit)="onSubmit(postForm.value)">
+        <div class="form-group" [class.error-style]="showError && postForm.controls['title'].errors">
+            <label>Title</label>
+            <input type="text" class="form-control" formControlName="title" >
+            <p *ngIf="showError && postForm.controls['title'].hasError('required')" class="error">
+                Title is required.
+            </p>
+        </div>
 
-    <div class="form-group" [class.error-style]="showError && postForm.controls['body'].errors">
-        <label>Body</label>
-        <input type="text" class="form-control" formControlName="body" >
-        <p *ngIf="showError && postForm.controls['body'].hasError('required')" class="error">
-            Body is required.
-        </p>
-    </div>
+        <div class="form-group" [class.error-style]="showError && postForm.controls['body'].errors">
+            <label>Body</label>
+            <textarea class="form-control" formControlName="body" cols="40" rows="5"></textarea>
+            <p *ngIf="showError && postForm.controls['body'].hasError('required')" class="error">
+                Body is required.
+            </p>
+        </div>
 
-    <div class="pull-right margin-bottom-10">
-        <button type="button" class="btn btn-cancel" (click)="cancel()">Cancel</button>
-        <button type="submit" class="btn btn-primary">Create</button>
-        <p *ngIf="loading">
-                Loading...
-        </p>
-        <p *ngIf="lastCreatedPost" class="success">
-            Post has been created : {{ lastCreatedPost.id }} - {{ lastCreatedPost.title }}
-        </p>
-        <p *ngIf="error" class="error">
-            An error occured ({{ error }}).
-        </p>
+        <div class="pull-left">
+                <p *ngIf="loading">
+                    Loading...
+                </p>
+                <p *ngIf="lastCreatedPost" class="success">
+                    Post has been created : {{ lastCreatedPost.id }} - {{ lastCreatedPost.title }}
+                </p>
+                <p *ngIf="error" class="error">
+                    An error occured ({{ error }}).
+                </p>    
+        </div>
+        <div class="pull-right margin-bottom-10">
+            <button type="button" class="btn btn-cancel" (click)="cancel()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
     </div>
-</form>
+    </div>
+    </div>
+    </div>

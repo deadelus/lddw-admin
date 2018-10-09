@@ -1,7 +1,17 @@
-<h1>Posts List</h1>
-<ul>
-  <li *ngFor="let post of posts">
-    {{ post.id }}  - {{ post.title }} - {{ post.body }}
-  </li>
-</ul>
-<a routerLinkActive="active" routerLink="/posts/new">New</a>
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h1>Posts List</h1>
+          <a routerLinkActive="active" routerLink="/posts/new"><button class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret dropdown-toggle"><i class="now-ui-icons ui-1_simple-add"></i></button></a>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li *ngFor="let post of posts">
+              {{ post.id }}  - {{ post.title }} - {{ post.body }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>

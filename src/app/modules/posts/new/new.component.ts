@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { PostsService } from '../posts.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-new',
@@ -14,7 +15,8 @@ export class NewComponent implements OnInit {
   error: string;
   loading: boolean = false;
 
-  constructor(private postsService: PostsService) { }
+  constructor(private postsService: PostsService,
+    private location: Location) { }
 
   ngOnInit() {
     this.buildPostForm();
@@ -25,6 +27,10 @@ export class NewComponent implements OnInit {
         title: new FormControl('', Validators.required),
         body: new FormControl('', Validators.required),
     });
+  }
+
+  cancel() {
+    this.location.back();
   }
 
   onSubmit(data: Object): void {

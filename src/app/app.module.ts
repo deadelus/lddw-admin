@@ -9,6 +9,8 @@ import { SideBarComponent } from './layouts/side-bar/side-bar.component';
 import { LoginComponent } from './modules/login/login.component';
 import { ApiService } from './commons/api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './layouts/navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     SideBarComponent,
     LoginComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule.forRoot()
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
