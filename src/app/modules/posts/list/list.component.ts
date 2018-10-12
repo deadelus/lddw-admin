@@ -1,24 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from '../posts.service';
+import { BaseComponent } from "src/app/abstract/base/BaseComponent";
+import { ApiService } from 'src/app/commons/api.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent extends BaseComponent {
 
-  constructor(private postsService: PostsService) { }
-
-  posts = [];
-
-  ngOnInit() {
-    this.postsService.getPostsList().subscribe(result => {
-      this.posts = result;
-    }, error => {
-      console.log("Error :");
-      console.log(error);
-    });
+  constructor(private apiService: ApiService) {
+    super(apiService);
+    this.api_path = "posts";
   }
 
 }

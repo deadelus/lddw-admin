@@ -6,10 +6,13 @@ const users_path = 'users';
 
 @Injectable()
 export class UsersService {
-
   constructor(private _apiService: ApiService) { }
 
   public getUsersList(){
     return this._apiService.get(users_path);
+  }
+
+  addUser(data: Object): any {
+    return this._apiService.post(users_path, data);
   }
 }

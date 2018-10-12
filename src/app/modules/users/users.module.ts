@@ -6,11 +6,14 @@ import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
 import { NewComponent } from './new/new.component';
 import { UsersService } from './users.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [ListComponent, DetailComponent, NewComponent],
   providers: [UsersService]
