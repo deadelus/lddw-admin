@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+node_modules/
+src/assets/bower_components
+src/assets/dist
+src/assets/plugins
