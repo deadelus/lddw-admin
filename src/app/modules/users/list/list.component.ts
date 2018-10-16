@@ -1,27 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
+import { ListCrudComponent } from '../../../abstract/components/crud.component';
+import { ApiService } from '../../../commons/api.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent extends ListCrudComponent implements OnInit {
 
-  users = [];
-
-  constructor(
-    private userService: UsersService
-  ) {}
+  constructor(private apiService: ApiService) {
+    super(apiService);
+    this.api_path = 'users';
+  }
 
   ngOnInit() {
-    this.userService.getUsersList().subscribe(result => {
-      this.users = result;
-    }, 
-    error => {
-      console.log("Error:");
-      console.log(error);
-    });
+    this.getList();
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../commons/api.service';
 
 @Component({
   selector: 'app-login',
@@ -6,15 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  constructor(private _apiService: ApiService) { }
 
   ngOnInit() {
     this.logUser();
   }
 
   logUser() {
-    localStorage.setItem('logged', 'true');
+    this._apiService.post('login', {
+      'email': 'admin@admin.com',
+      'password': 'admin'
+    }).subscribe(
+      res => {
+        localStorage.setItem('logged', 'true');
+        localStorage.setItem('token', res.accessToken);
+      },
+      error => {
+        console.log('error');
+      }
+    );
   }
 
 }

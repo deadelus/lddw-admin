@@ -9,25 +9,36 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable()
 export class ApiService {
 
+  public token = 'auth';
+
   constructor(
     private http: HttpClient,
     private router: Router
-  ) { }
-
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json',
-      'Authorization': 'my-auth-token'
-    })
+  ) {
   }
-  
 
-  private handleError(err: HttpErrorResponse){
+  private httpOptions;
+
+  private checkToken() {
+    if (localStorage.getItem('token')) {
+      this.token = localStorage.getItem('token');
+      this.httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type':  'application/json',
+          'Authorization': 'Bearer ' + this.token
+        })
+      };
+    } else {
+      this.router.navigateByUrl('/login');
+    }
+  }
+
+  private handleError(err: HttpErrorResponse) {
     return throwError( err.message );
   }
-  
 
-  get(path:string): Observable<any> {
+  get(path: string): Observable<any> {
+    this.checkToken();
     return this.http.get(`${environment.api_url}${path}`, this.httpOptions)
       .pipe(
         catchError( (err) => this.handleError(err)),
@@ -36,21 +47,24 @@ export class ApiService {
   }
 
 
-  put(path:string, params:any): Observable<any> {
+  put(path: string, params: any): Observable<any> {
+    this.checkToken();
     return this.http.put(`${environment.api_url}${path}`, params, this.httpOptions).pipe(
         catchError( (err) => this.handleError(err)),
         map( ( res: Response ) => res )
       );
   }
 
-  post(path:string, params:any): Observable<any> { 
+  post(path: string, params: any): Observable<any> {
+    this.checkToken();
     return this.http.post(`${environment.api_url}${path}`, params, this.httpOptions).pipe(
       catchError( (err) => this.handleError(err)),
       map( ( res: Response ) => res )
     );
   }
 
-  delete(path:string, params:any): Observable<any> {
+  delete(path: string, params: any): Observable<any> {
+    this.checkToken();
     return this.http.delete(`${environment.api_url}${path}`, this.httpOptions)
       .pipe(
         catchError( (err) => this.handleError(err)),

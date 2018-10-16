@@ -5,19 +5,19 @@
                     <h1>Add new post</h1>
                 </div>
                 <div class="card-body">
-    <form class="form-search clearfix" *ngIf="postForm" [formGroup]="postForm" (ngSubmit)="onSubmit(postForm.value)">
-        <div class="form-group" [class.error-style]="showError && postForm.controls['title'].errors">
+    <form class="form-search clearfix" *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <div class="form-group" [class.error-style]="showError && form.controls['title'].errors">
             <label>Title</label>
             <input type="text" class="form-control" formControlName="title" >
-            <p *ngIf="showError && postForm.controls['title'].hasError('required')" class="error">
+            <p *ngIf="showError && form.controls['title'].hasError('required')" class="error">
                 Title is required.
             </p>
         </div>
 
-        <div class="form-group" [class.error-style]="showError && postForm.controls['body'].errors">
+        <div class="form-group" [class.error-style]="showError && form.controls['body'].errors">
             <label>Body</label>
             <textarea class="form-control" formControlName="body" cols="40" rows="5"></textarea>
-            <p *ngIf="showError && postForm.controls['body'].hasError('required')" class="error">
+            <p *ngIf="showError && form.controls['body'].hasError('required')" class="error">
                 Body is required.
             </p>
         </div>

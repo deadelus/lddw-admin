@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { PostsService } from '../posts.service';
+import { NewCrudComponent } from '../../../abstract/components/crud.component';
+import { ApiService } from '../../../commons/api.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -8,45 +9,22 @@ import { Location } from '@angular/common';
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.css']
 })
-export class NewComponent implements OnInit {
-  postForm: FormGroup;
-  showError: boolean;
-  lastCreatedPost: any;
-  error: string;
-  loading: boolean = false;
+export class NewComponent extends NewCrudComponent implements OnInit {
 
-  constructor(private postsService: PostsService,
-    private location: Location) { }
+  constructor(private apiService: ApiService,
+    private location: Location) {
+    super(apiService, location);
+  }
 
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.buildPostForm();
   }
 
   private buildPostForm() {
-    this.postForm = new FormGroup({
+    this.form = new FormGroup({
         title: new FormControl('', Validators.required),
         body: new FormControl('', Validators.required),
     });
   }
-
-  cancel() {
-    this.location.back();
-  }
-
-  onSubmit(data: Object): void {
-    this.lastCreatedPost = undefined;
-    this.error = undefined;
-    if (this.postForm.valid) {
-      this.loading = true;
-      this.postsService.addPost(data).subscribe(result => {
-        this.lastCreatedPost = result;
-      }, error => {
-        this.error = error;
-        this.loading = false;
-      }, () => {
-        this.loading = false;
-      });
-    }
-  }
-
 }
