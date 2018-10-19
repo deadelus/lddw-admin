@@ -6,12 +6,75 @@
           <a routerLinkActive="active" routerLink="/posts/new"><button class="btn btn-round btn-default dropdown-toggle btn-simple btn-icon no-caret dropdown-toggle"><i class="now-ui-icons ui-1_simple-add"></i></button></a>
         </div>
         <div class="card-body">
-          <ul>
-            <li *ngFor="let post of items">
-              {{ post.id }}  - {{ post.title }} - {{ post.body }}
-            </li>
-          </ul>
-        </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>
+                    Reports
+                  </th>
+                  <th>
+                    Date
+                  </th>
+                  <th>
+                    Title
+                  </th>
+                  <th>
+                    Tags
+                  </th>
+                  <th>
+                    User
+                  </th>
+                  <th class="text-right">
+                    Actions
+                  </th>
+                </thead>
+                <tbody>
+                  <ng-container *ngFor="let post of items; let i = index">
+                    <tr (click)="itemsVisibility[i] = !itemsVisibility[i]">
+                      <td>
+                        {{ post.metas.reports }}
+                      </td>
+                      <td>
+                        {{ post.created_at }}
+                      </td>
+                      <td>
+                        {{ post.title }}
+                      </td>
+                      <td>
+                        [TODO]
+                      </td>
+                      <td>
+                        {{ post.user.pseudo }} 
+                      </td>
+                      <td class="text-right">
+                          <a [routerLink]="['/posts/', post.id]">Details</a>
+                      </td>
+                    </tr>
+                    <tr *ngIf="itemsVisibility[i]" [@fadeInOut]>
+                        <td>
+                          {{ post.metas.likes }} Likes
+                        </td>
+                        <td>
+                          {{ post.metas.comments }} Comments
+                        </td>
+                        <td>
+                          0 Views
+                        </td>
+                        <td>
+                          0 Views
+                        </td>
+                        <td>
+                          0 Views
+                        </td>
+                        <td>
+                            0 Views
+                        </td>
+                      </tr>
+                  </ng-container>
+                </tbody>
+              </table>
+            </div>
+          </div>
       </div>
     </div>
 </div>

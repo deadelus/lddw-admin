@@ -1,0 +1,31 @@
+.post-modal
+    position fixed
+    top 0
+    right 0
+    bottom 0
+    left 0
+    z-index 99999
+    overflow auto
+    display: flex
+    .post-modal-body
+        padding 20px
+        background #fff
+        margin auto
+        z-index: 999999
+
+.post-modal-background
+    position fixed
+    top 0
+    right 0
+    bottom 0
+    left 0
+    background-color #000
+    opacity 0.75
+    z-index 9999
+    cursor pointer
+
+body
+    &.post-modal-open
+        overflow hidden !important
+        .post-modal
+            display: block !important

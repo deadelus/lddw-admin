@@ -21,13 +21,29 @@ export abstract class ListCrudComponent extends CrudComponent {
 
   getList() {
     this._apiService.get(this.api_path).subscribe(result => {
-      this.items = result;
+      this.items = result.data;
     }, error => {
       console.log('Error :');
       console.log(error);
     });
   }
+}
 
+export abstract class DetailCrudComponent extends CrudComponent {
+  item: any;
+
+  constructor(private _apiService: ApiService) {
+    super();
+  }
+
+  getItem(postId: string) {
+    this._apiService.get(this.api_path+"/"+postId).subscribe(result => {
+      this.item = result.data;
+    }, error => {
+      console.log('Error :');
+      console.log(error);
+    });
+  }
 }
 
 export abstract class NewCrudComponent extends CrudComponent {

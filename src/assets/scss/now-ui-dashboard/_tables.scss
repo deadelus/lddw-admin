@@ -52,6 +52,8 @@
        border: 0;
    }
 
+
+
    .radio,
    .checkbox{
        margin-top: 0;
@@ -79,6 +81,21 @@
    > tfoot > tr > td{
        padding: 12px 7px;
        vertical-align: middle;
+   }
+
+   > tbody > tr {
+        &:hover{
+            cursor: pointer;
+            background-color: rgb(233, 233, 233);
+            /* Firefox */
+            -moz-transition: all 0.2s ease-in;
+            /* WebKit */
+            -webkit-transition: all 0.20s ease-in;
+            /* Opera */
+            -o-transition: all 0.2s ease-in;
+            /* Standard */
+            transition: all 0.2s ease-in;
+        }
    }
 
    .th-description{

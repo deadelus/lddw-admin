@@ -1,0 +1,173 @@
+$color1st = #333334
+$bgBar = $color1st
+$bg = #E9EBEE
+$font = #000000
+$font2 = #A1A1A1
+$font3 = #F6F7F9
+$fontBtnStandart = #606672
+$liked = #F05228
+
+.post
+    margin-bottom: 20px
+    background: white
+    padding 15px 0 0 0
+    .content
+        text-align: center
+        cursor: pointer
+        a
+            display: block
+            width: 100%
+        img
+            max-width: 100%
+            max-height: 70vh
+            margin: auto
+    .user-info
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        padding: 0 15px
+        margin: 0
+        margin-bottom: 20px
+        position relative
+        .options
+            position absolute
+            top 0
+            right 15px
+            width: 50px
+            height 50px
+            cursor pointer
+            .btn-option
+                position absolute
+                right 0
+                svg
+                    width 15px
+                    fill: $fontBtnStandart
+        .avatar
+            width: 50px
+            height: 50px
+            overflow: hidden
+            border-radius: 50px
+            img
+                width: 100%
+                height: auto
+        .info
+            margin: auto 15px
+            span
+                &.name
+                    display: block
+                    font-size: 1.2rem
+                    line-height: 20px
+                    color: $font
+                &.date
+                    display: block
+                    font-size: 0.9rem
+                    color: $font2
+                &.bio
+                    display: block
+                    font-size: 12px
+                    color: $font2
+                    line-height: 18px
+                    svg
+                        display inline
+                        width: 18px
+                        vertical-align: bottom
+    .title
+        font-size: 2rem
+        margin: 20px 15px 10px 15px
+        color: $font
+        .tag
+            display inline
+            margin: 0
+            margin-right: 5px
+    .action-bar
+        width: 100%
+        margin: 15px auto
+        padding: 0 15px
+        display: flex
+        .action
+            font-weight: bold
+            font-size: 1.2rem
+            color: $font
+            display: flex
+            line-height: 15px
+            margin-right: 30px
+            cursor: pointer
+            color: $fontBtnStandart
+            svg
+                width: 15px
+                height: 15px
+                margin: 0 5px 0 0
+                fill: $fontBtnStandart
+    .comments-area
+        background: $font3
+        padding: 8px 0 15px 0
+        .comments
+            margin-bottom: 0px
+            .like-counter
+                padding 0 15px
+                padding-bottom: 8px
+                border-bottom: 1px #00000014 solid
+                box-sizing: border-box
+                position relative
+                font-size: 1.2rem
+                svg
+                    position absolute
+                    height 25px
+                    width: 25px
+                    left: 15px
+                    top: -2px
+                a
+                    position relative
+                    top: 0
+                    left: 30px
+                    font-weight: 700
+            .comment
+                display: flex
+                flex-direction: row
+                text-align: left
+                justify-content: left
+                padding 0 15px
+                margin 15px 0 0 0
+                .user-info
+                    display: block
+                    width: 30px
+                    margin: 0
+                    padding: 0
+                    .avatar
+                        width: 30px
+                        height: 30px
+                        overflow: hidden
+                        border-radius: 30px
+                        margin: auto
+                        img
+                            width: 100%
+                            height: auto
+                .comment-body
+                    font-size: 1.4rem
+                    margin: 0
+                    padding-left: 15px
+                    width: 100%
+                    .comment-form
+                        .comment-field
+                            position relative
+                            input
+                                width: 100%
+                                text-align: right
+                                font-size: 1.5rem
+                                line-height: 24px
+                                height 30px
+                                padding: 0 60px 0 5px
+                                outline: none
+                                border: none
+                                text-align: left
+                            a.upload
+                                position absolute
+                                display: block
+                                top: 0
+                                right 0
+                                width: 20px
+                                height 20px
+                                margin: 5px
+                                svg
+                                    width: 20px
+                                    fill: $fontBtnStandart

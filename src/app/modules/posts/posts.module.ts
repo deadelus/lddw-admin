@@ -7,6 +7,7 @@ import { NewComponent } from './new/new.component';
 import { DetailComponent } from './detail/detail.component';
 import { PostsService } from './posts.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PostModule } from './detail/post/post.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PostsRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
+    PostModule
   ],
   declarations: [ListComponent, NewComponent, DetailComponent],
   providers: [PostsService]
