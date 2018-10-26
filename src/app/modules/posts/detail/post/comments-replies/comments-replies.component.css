@@ -1,10 +1,12 @@
 img {
   width: 100%;
 }
+
 .replies {
   width: 100%;
   padding-left: 45px;
 }
+
 .replies .more {
   display: block;
   text-align: center;
@@ -13,6 +15,7 @@ img {
   line-height: 20px;
   height: 20px;
 }
+
 .replies .comment {
   display: flex;
   flex-direction: row;
@@ -21,12 +24,14 @@ img {
   padding: 0 15px;
   margin: 15px 0 0 0;
 }
+
 .replies .comment .user-info {
   display: block;
   width: 20px;
   margin: 0;
   padding: 0;
 }
+
 .replies .comment .user-info .avatar {
   width: 20px;
   height: 20px;
@@ -34,31 +39,38 @@ img {
   border-radius: 20px;
   margin: auto;
 }
+
 .replies .comment .comment-body {
   font-size: 1.4rem;
   margin: 0;
   padding-left: 15px;
   width: 100%;
 }
+
 .replies .comment .comment-body .action-bar {
   margin: auto;
   padding: 0;
   font-size: 1.2rem;
 }
+
 .replies .comment .comment-body .action-bar a {
   display: inline;
   width: auto;
 }
+
 .replies .comment .comment-body .comment-area {
   margin: 0;
   text-align: left;
 }
+
 .replies .comment .comment-body .comment-area .name {
   display: inline;
 }
+
 .replies .comment .comment-body .comment-form .comment-field {
   position: relative;
 }
+
 .replies .comment .comment-body .comment-form .comment-field input {
   width: 100%;
   text-align: right;
@@ -70,6 +82,7 @@ img {
   border: none;
   text-align: left;
 }
+
 .replies .comment .comment-body .comment-form .comment-field a.upload {
   position: absolute;
   display: block;
@@ -79,6 +92,7 @@ img {
   height: 20px;
   margin: 5px;
 }
+
 .replies .comment .comment-body .comment-form .comment-field a.upload svg {
   width: 20px;
   fill: #606672;

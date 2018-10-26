@@ -8,21 +8,6 @@
 
     <!-- User avatar and options btn -->
     <div class="user-info">
-        <div class="options" (click)="dropdownToggle(!optionsDD)">
-            <!-- Dropdown menu btn -->
-            <div class="btn-option">
-                <svg viewBox="0 0 1000 248"><path d="M123.894,0c68.379,0 123.894,55.515 123.894,123.894c0,68.379 -55.515,123.894 -123.894,123.894c-68.379,0 -123.894,-55.515 -123.894,-123.894c0,-68.379 55.515,-123.894 123.894,-123.894Zm376.106,0c68.379,0 123.894,55.515 123.894,123.894c0,68.379 -55.515,123.894 -123.894,123.894c-68.379,0 -123.894,-55.515 -123.894,-123.894c0,-68.379 55.515,-123.894 123.894,-123.894Zm376.106,0c68.379,0 123.894,55.515 123.894,123.894c0,68.379 -55.515,123.894 -123.894,123.894c-68.379,0 -123.894,-55.515 -123.894,-123.894c0,-68.379 55.515,-123.894 123.894,-123.894Z"/></svg>
-            </div>
-            <!-- Dropdown menu -->
-            <div *ngIf="optionsDD" class="dropdown dropdown-post">
-                <div class="list">
-                    <a (click)="openModal('report-modal-' + index)">- Report</a>
-                    <a (click)="openModal('edit-post-modal-' + index)">- Modifier</a>
-                    <a (click)="openModal('confirm-delete-post-modal-' + index)">- Supprimer</a>
-                </div>
-            </div>
-        </div>
-
         <div class="avatar">
             <img src="http://placehold.it/50x50" alt="">
         </div>
@@ -38,7 +23,7 @@
     </div>
 
     <!-- text -->
-    <div class="title">
+    <div class="title-post">
         {{ post.title }}
         <a href="#" class="tag">#tag1</a>
         <a href="#" class="tag">#tag2</a>
@@ -95,20 +80,4 @@
             </div>
         </div>
     </div>
-
-    <post-modal id="report-modal-{{index}}">
-        <h1>Report modal</h1>
-
-        <button (click)="closeModal('report-modal-' + index)">Close</button>
-    </post-modal>
-
-    <post-modal id="edit-post-modal-{{index}}">
-        <h1>Edit modal</h1>
-        <button (click)="closeModal('edit-post-modal-' + index)">Close</button>
-    </post-modal>
-
-    <post-modal id="confirm-delete-post-modal-{{index}}">
-        <h1>Confirmation modal</h1>
-        <button (click)="closeModal('confirm-delete-post-modal-' + index)">Close</button>
-    </post-modal>
 </div>

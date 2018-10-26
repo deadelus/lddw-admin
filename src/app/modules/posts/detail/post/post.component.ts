@@ -6,7 +6,7 @@ import { ModalService } from './modules/modal/modal.service';
   selector: 'post-item',
   templateUrl: './post.component.html',
   styleUrls: [
-    './post.component.styl'
+    './post.component.css'
   ]
 })
 export class PostComponent implements OnInit {

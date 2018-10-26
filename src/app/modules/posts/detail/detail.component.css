@@ -1,0 +1,19 @@
+.action-btn {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: rgb(255, 54, 54);
+  background-color: white;
+}
+
+.action-btn:hover {
+  color: white;
+  background-color: rgb(255, 54, 54);
+}

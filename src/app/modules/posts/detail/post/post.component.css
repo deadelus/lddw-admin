@@ -1,23 +1,28 @@
 .post {
+  border-style: dashed;
+  border-color: black;
+  margin-left: 25px;
   margin-bottom: 20px;
   background: #fff;
   padding: 15px 0 0 0;
-  border-style: solid;
-  border-width: 5px;
 }
+
 .post .content {
   text-align: center;
   cursor: pointer;
 }
+
 .post .content a {
   display: block;
   width: 100%;
 }
+
 .post .content img {
   max-width: 100%;
   max-height: 70vh;
   margin: auto;
 }
+
 .post .user-info {
   display: flex;
   flex-direction: row;
@@ -27,6 +32,7 @@
   margin-bottom: 20px;
   position: relative;
 }
+
 .post .user-info .options {
   position: absolute;
   top: 0;
@@ -35,65 +41,78 @@
   height: 50px;
   cursor: pointer;
 }
+
 .post .user-info .options .btn-option {
   position: absolute;
   right: 0;
 }
+
 .post .user-info .options .btn-option svg {
   width: 15px;
   fill: #606672;
 }
+
 .post .user-info .avatar {
   width: 50px;
   height: 50px;
   overflow: hidden;
   border-radius: 50px;
 }
+
 .post .user-info .avatar img {
   width: 100%;
   height: auto;
 }
+
 .post .user-info .info {
   margin: auto 15px;
 }
+
 .post .user-info .info span.name {
   display: block;
   font-size: 1.2rem;
   line-height: 20px;
   color: #000;
 }
+
 .post .user-info .info span.date {
   display: block;
   font-size: 0.9rem;
   color: #a1a1a1;
 }
+
 .post .user-info .info span.bio {
   display: block;
   font-size: 12px;
   color: #a1a1a1;
   line-height: 18px;
 }
+
 .post .user-info .info span.bio svg {
   display: inline;
   width: 18px;
   vertical-align: bottom;
 }
-.post .title {
+
+.post .title-post {
   font-size: 2rem;
   margin: 20px 15px 10px 15px;
   color: #000;
 }
-.post .title .tag {
+
+.post .title-post .tag {
   display: inline;
   margin: 0;
   margin-right: 5px;
 }
+
 .post .action-bar {
   width: 100%;
   margin: 15px auto;
   padding: 0 15px;
   display: flex;
 }
+
 .post .action-bar .action {
   font-weight: bold;
   font-size: 1.2rem;
@@ -104,19 +123,23 @@
   cursor: pointer;
   color: #606672;
 }
+
 .post .action-bar .action svg {
   width: 15px;
   height: 15px;
   margin: 0 5px 0 0;
   fill: #606672;
 }
+
 .post .comments-area {
   background: #f6f7f9;
   padding: 8px 0 15px 0;
 }
+
 .post .comments-area .comments {
   margin-bottom: 0px;
 }
+
 .post .comments-area .comments .like-counter {
   padding: 0 15px;
   padding-bottom: 8px;
@@ -125,6 +148,7 @@
   position: relative;
   font-size: 1.2rem;
 }
+
 .post .comments-area .comments .like-counter svg {
   position: absolute;
   height: 25px;
@@ -132,12 +156,14 @@
   left: 15px;
   top: -2px;
 }
+
 .post .comments-area .comments .like-counter a {
   position: relative;
   top: 0;
   left: 30px;
   font-weight: 700;
 }
+
 .post .comments-area .comments .comment {
   display: flex;
   flex-direction: row;
@@ -146,12 +172,14 @@
   padding: 0 15px;
   margin: 15px 0 0 0;
 }
+
 .post .comments-area .comments .comment .user-info {
   display: block;
   width: 30px;
   margin: 0;
   padding: 0;
 }
+
 .post .comments-area .comments .comment .user-info .avatar {
   width: 30px;
   height: 30px;
@@ -159,19 +187,23 @@
   border-radius: 30px;
   margin: auto;
 }
+
 .post .comments-area .comments .comment .user-info .avatar img {
   width: 100%;
   height: auto;
 }
+
 .post .comments-area .comments .comment .comment-body {
   font-size: 1.4rem;
   margin: 0;
   padding-left: 15px;
   width: 100%;
 }
+
 .post .comments-area .comments .comment .comment-body .comment-form .comment-field {
   position: relative;
 }
+
 .post .comments-area .comments .comment .comment-body .comment-form .comment-field input {
   width: 100%;
   text-align: right;
@@ -183,6 +215,7 @@
   border: none;
   text-align: left;
 }
+
 .post .comments-area .comments .comment .comment-body .comment-form .comment-field a.upload {
   position: absolute;
   display: block;
@@ -192,6 +225,7 @@
   height: 20px;
   margin: 5px;
 }
+
 .post .comments-area .comments .comment .comment-body .comment-form .comment-field a.upload svg {
   width: 20px;
   fill: #606672;

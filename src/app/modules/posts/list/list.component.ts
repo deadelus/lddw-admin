@@ -11,11 +11,11 @@ import { trigger, style, animate, transition } from '@angular/animations';
   animations: [
       trigger('fadeInOut', [
         transition(':enter', [   // :enter is alias to 'void => *'
-          style({opacity:0}),
-          animate(250, style({opacity:1})) 
+          style({opacity: 0}),
+          animate(250, style({opacity: 1}))
         ]),
         transition(':leave', [   // :leave is alias to '* => void'
-          animate(250, style({opacity:0})) 
+          animate(250, style({opacity: 0}))
         ])
       ])
   ]

@@ -1,6 +1,7 @@
 img {
   width: 100%;
 }
+
 .comment {
   display: flex;
   flex-direction: row;
@@ -9,12 +10,14 @@ img {
   padding: 0 15px;
   margin: 15px 0 0 0;
 }
+
 .comment .user-info {
   display: block;
   width: 30px;
   margin: 0;
   padding: 0;
 }
+
 .comment .user-info .avatar {
   width: 30px;
   height: 30px;
@@ -22,21 +25,25 @@ img {
   border-radius: 30px;
   margin: auto;
 }
+
 .comment .user-info .avatar img {
   width: 100%;
   height: auto;
 }
+
 .comment .comment-body {
   font-size: 1.4rem;
   margin: 0;
   padding-left: 15px;
   width: 100%;
 }
+
 .comment .comment-body .action-bar {
   margin: auto;
   padding: 0;
   font-size: 1.2rem;
 }
+
 .comment .comment-body .action-bar a {
   display: inline;
   width: auto;

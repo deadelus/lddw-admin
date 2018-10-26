@@ -4,9 +4,31 @@
         <div class="card-header">
           <h1>Post Detail</h1>
         </div>
-        <div class="card-body">
-          <div style="max-width: 500px">
+        <div class="card-body row">
+          <div class="col-md-8">
           <post-item [post]="item"></post-item>
+          </div>
+          <div class="col-md-4">
+            <div *ngIf="!postLocked" (click)="lockPost()" class="action-btn">
+              <i style="font-size: 40px" class="fas fa-lock"></i><p>Lock Post</p>
+
+            </div>
+            <div *ngIf="postLocked" (click)="unlockPost()" class="action-btn">
+              <i style="font-size: 40px" class="fas fa-undo"></i>
+              <p>Unlock Post</p>
+            </div>
+            <div (click)="addFakeLikes()" class="action-btn">
+              <i style="font-size: 40px" class="now-ui-icons ui-2_like"></i>
+              <p>Add Fake-likes</p>
+            </div>
+            <div *ngIf="!postAuthorBanned" (click)="banAuthor()" class="action-btn">
+              <i style="font-size: 40px" class="fas fa-ban"></i>
+              <p>Ban Author</p>
+            </div>
+            <div *ngIf="postAuthorBanned" (click)="unbanAuthor()" class="action-btn">
+              <i style="font-size: 40px" class="fas fa-undo"></i>
+              <p>Unban Author</p>
+            </div>
           </div>
         </div>
       </div>

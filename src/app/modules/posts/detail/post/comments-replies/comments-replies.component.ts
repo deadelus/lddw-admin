@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'comment-replies',
   templateUrl: './comments-replies.component.html',
   styleUrls: [
-    'comments.component.styl'
+    'comments-replies.component.css'
   ]
 })
 export class CommentsRepliesComponent implements OnInit {
