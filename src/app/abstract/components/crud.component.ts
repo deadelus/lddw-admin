@@ -32,7 +32,7 @@ export abstract class ListCrudComponent extends CrudComponent {
 export abstract class DetailCrudComponent extends CrudComponent {
   item: any;
 
-  constructor(private _apiService: ApiService) {
+  constructor(protected _apiService: ApiService) {
     super();
   }
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DetailCrudComponent } from 'src/app/abstract/components/crud.component';
 import { ApiService } from 'src/app/commons/api.service';
 import { ActivatedRoute } from '@angular/router';
+import {User} from './post/model/user';
 
 @Component({
   selector: 'app-detail',
@@ -14,12 +15,24 @@ export class DetailComponent extends DetailCrudComponent implements OnInit {
     this.api_path = 'posts';
   }
 
+  author: any;
   postAuthorBanned = false;
   postLocked = false;
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.getItem(params['id']);
+      this.getAuthor(params['id']);
+    });
+  }
+
+  getAuthor(postId: string) {
+    this._apiService.get(this.api_path + '/' + postId + '/author').subscribe(result => {
+      this.author = result.data;
+      console.log(result.data);
+    }, error => {
+      console.log('Error :');
+      console.log(error);
     });
   }
 
